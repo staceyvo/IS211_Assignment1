@@ -3,8 +3,9 @@
 class Book(object):
     """A class that represents a book."""
     #class attributes
-
-    def __init__(self, author, title):
+    author = ''
+    title = ''
+    def __init__(self, title, author):
         """Constructor for the Book class.
 
         Args:
@@ -15,9 +16,16 @@ class Book(object):
             author (str):
             title (str):
             """
-    self.author = ('')
-    self.title = ('')
+        self.author = author
+        self.title = title
 
-# init function that sets attributes to variables
-#create function, display that shows title/author
 
+    def display(self):
+        print('{}, written by {}.'.format(self.title, self.author))
+
+if __name__ == '__main__':
+    mice = Book('Of Mice and Men', 'John Steinbeck')
+    mockingbird = Book('To Kill a Mockingbird', 'Harper Lee')
+
+    mice.display()
+    mockingbird.display()
