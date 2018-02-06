@@ -1,8 +1,30 @@
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Check if numbers in a list are divisible by another value."""
 
 def listDivide(numbers, divide=2):
     #take a list and divide each number by divide
     #find values with no remainder
+
+    """Return numbers that are evenly divisible by divide.
+
+            Args:
+                numbers is a list
+                divide is used to divide numbers
+
+
+            Returns:
+                Returns a number if it is divisible evenly.
+
+
+            Examples:
+                listDivide([5, 8, 6, 4, 9], 3):
+                2
+
+                listDivide([18, 23, 100, 6, 22], 8):
+                0
+
+            """
 
     count = 0
 
@@ -27,4 +49,4 @@ def testListDivide():
         raise ListDivideException
 
 if __name__ == '__main__':
-    testListDivide()
+     testListDivide()
